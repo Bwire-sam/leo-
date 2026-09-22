@@ -9,7 +9,11 @@ def height_feet_Inches(height):
     tall = height * 0.0328084
     feet = math.floor(tall)
     inches = round((tall- feet) * 12)
-    return f"Your height of {height} is {feet} feet and {inches} inches long"
+    if inches == 12:
+        feet = feet + 1
+        return f"Your height of {height} is {feet} feet long"
+    else:
+        return f"Your height of {height} is {feet} feet and {inches} inches long"
 
 if __name__ == "__main__":
     main()
